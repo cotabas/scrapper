@@ -2,48 +2,65 @@ package main
 
 import (
   "fmt"
-  "log"
-  //"net/http"
-  //"net/url"
-
-  "github.com/gocolly/colly"
+  "os"
+  "os/exec"
+  "strings"
 )
 
 func main() {
-  // Create a new collector
-  c := colly.NewCollector(
-    // Attach a debugger to the collector
-//    colly.Debugger(&colly.DebugLog{}),
-    colly.UserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"),
-    colly.AllowedDomains("www.177milkstreet.com"),
-  )
+  getFirstPage()
+}
 
-  // The URL for the login action
-  loginURL := "https://www.177milkstreet.com/login"
-
-  // The data you need to send for a login
-  loginData := map[string]string{
-    "loginName": "cotabas@gmail.com",
-    "password": "Qwu824r2!",
-  }
-
-  // Handle login
-  err := c.Post(loginURL, loginData)
+func getLinx() {
+  linx := []string{}
+  outFile, err := os.Create("output.txt")
   if err != nil {
-    log.Fatal("Login failed:", err)
-    fmt.Println("Login failed:", err)
+    fmt.Println(" file open error" , err)
   }
 
-  // After logging in, visit the page you want to scrape
-  c.OnHTML("html selector", func(e *colly.HTMLElement) {
-    // Scrape information
-    fmt.Println("First name:", e.ChildText("#first-name"))
-  })
+  for i := 2; i < 181; i++ {
+    recipeLink := "https://www.177milkstreet.com/recipes/p" + fmt.Sprint(i)
+    fmt.Println(i)
+    fmt.Println(recipeLink)
+    curl := exec.Command("curl", recipeLink) 
+    out, err := curl.Output()
+    if err != nil {
+      fmt.Println("curl output error" , err)
+    }
 
-  // Visit a page that requires authentication
-  err = c.Visit("https://example.com/protected-page")
+    lines := strings.Split(string(out), "\n")
+    for _, line := range lines {
+      if strings.Contains(line, `class="recipe-card__image-link"`) {
+        line = strings.Split(line, `"`)[1]
+        linx = append(linx, line)
+      }
+    }
+  }
+  for _, line := range linx {
+    outFile.WriteString(line + "\n")
+    outFile.Sync()
+    fmt.Println(line)
+  }
+}
+
+func getFirstPage() {
+  linx := []string{}
+
+  recipeLink := "https://www.177milkstreet.com/recipes"
+  curl := exec.Command("curl", recipeLink) 
+  out, err := curl.Output()
   if err != nil {
-    log.Fatal("Visiting failed:", err)
+    fmt.Println("curl output error" , err)
   }
 
+  lines := strings.Split(string(out), "\n")
+  for _, line := range lines {
+    if strings.Contains(line, `class="recipe-card__image-link"`) {
+      line = strings.Split(line, `"`)[1]
+      linx = append(linx, line)
+    }
+  }
+  for _, line := range linx {
+    fmt.Println(line)
+  }
 }
