@@ -1,0 +1,77 @@
+
+  {
+  "@context": "http://schema.org",
+  "@type": "Recipe",
+  "name": "Tarte Tatin",
+  "description": "Tarte tatin is made by baking apples in sugar under a blanket of pastry, then inverting the tart out of the pan for serving to reveal a stunner of a dessert:...",
+  "image": "https://www.177milkstreet.com/index.php?p=actions/assets/generate-transform&amp;transformId=18964",
+  "recipeYield": "Makes one 9-inch tart",
+  "recipeCategory": "Desserts",
+  "isAccessibleForFree": "False",
+    "hasPart": [
+      {
+        "@type": "WebPageElement",
+        "isAccessibleForFree": "False",
+        "cssSelector": ".ingredient"
+      }, {
+        "@type": "WebPageElement",
+        "isAccessibleForFree": "False",
+        "cssSelector": ".recipe__directions"
+      }
+    ],
+  "recipeIngredient": [
+      "All-purpose flour, for dusting",
+      "Flaky Pie Pastry, in a 4½-inch disk and refrigerated (not rolled and fit into a pie plate)",
+      "2 1/4 to 2½ pounds (4 to 6 medium) Honeycrisp apples",
+      "57 grams (4 tablespoons) salted butter, cut into 4 or 5 chunks",
+      "143 grams (⅔ cup) white sugar",
+      "2 tablespoons maple syrup",
+      "1/4 teaspoon table salt" 
+        ],
+  "recipeInstructions": [
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Dust a sheet of kitchen parchment with flour, set the pie dough on top and dust it with flour. If the dough is too firm to roll, let stand at room temperature for 5 to 10 minutes. Roll the dough into a 10-inch circle about ¼ inch thick. Cut four 1-inch slits in the center that will allow steam to vent (the slits will not be visible in the finished tart), then lay a sheet of plastic wrap against the dough. Slide the parchment with dough onto a baking sheet and refrigerate until ready."
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Peel the apples, then cut each into 4 wedges. Using a paring knife, notch out the core from each piece, then cut each wedge in half lengthwise. Heat the oven to 375°F with a rack in the middle position. In a 10-inch oven-safe skillet over medium, melt the butter, then add the sugar and maple syrup; stir with a silicone spatula until the sugar is evenly moistened."
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Remove the pan from the heat and arrange most of the apples cut side down and facing the same direction in a tightly packed ring around the circumference the pan, slightly overlapping the wedges. Tuck the remaining wedges into gaps, then sprinkle evenly with the salt."
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Set the pan over medium-high and bring to a vigorous simmer. Reduce to medium and cook, without stirring, until the apples release some juice and the liquid forms a bubbly, amber-colored caramel that submerges the fruit about halfway, 25 to 30 minutes; occasionally rotate the pan if you notice hot spots, but do not stir. Remove the pan from the heat."
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Working quickly, remove the pastry from the refrigerator. Carefully place the pastry on top of the apples and, using a silicone spatula, tuck the edges into the skillet. Bake until the crust is deep golden brown and the caramel has begun to bubble at the edges, 40 to 50 minutes. Carefully remove the skillet from the oven (the handle will be hot) and set it on a wire rack; let rest for 10 to 15 minutes."
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Run the silicone spatula between the sides of the pan and the crust to loosen. Invert a heatproof platter that’s about 12 inches in diameter onto the skillet and, using two potholders, hold the two together while carefully inverting them, then lift off the skillet. If needed, carefully reposition any pieces of fruit that were dislodged. Serve warm or at room temperature."
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Pear Tarte Tatin: Follow the recipe to roll out and refrigerate the dough. Peel 2¼ to 2½ pounds (4 to 6 medium) ripe but firm Bosc pears, then cut each one lengthwise into quarters. Using a paring knife, notch out the core from each quarter and slice off the tough center fiber that runs the length the fruit. Continue with the recipe to heat the oven and prepare the caramel and fruit, using the pears in place of the apples; arrange the pieces cut side down and facing the same direction in a tightly packed pinwheel pattern around the circumference of the pan (the narrow end of the pears should point toward the center of the pan). Cut the remaining pears in half crosswise and arrange them in the center. Cook on the stovetop, bake and unmold as directed.
+
+"
+      } ,
+                {
+          "@type": "HowToStep",
+          "name": "",
+          "text": "Peach Tarte Tatin: Follow the recipe to roll out and refrigerate the dough. Halve and pit 2¼ to 2½ pounds (4 to 6 medium ) ripe but firm peaches, then cut each half into 4 wedges. Continue with the recipe to heat the oven and prepare the caramel and fruit, using the peaches in place of the apples; arrange the wedges cut side down and facing the same direction in a tightly packed ring around the circumference of the pan. Arrange the remaining wedges in the center. Cook on the stovetop, bake and unmold as directed.
+
+"
+      }  
+      ]}
+  
