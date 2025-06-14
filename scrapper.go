@@ -9,7 +9,12 @@ import (
 
 func main() {
   //get the links to all the recipes
-  //getLinx(getFirstPage())
+  getLinx(getFirstPage())
+  //get the recipes and save them to individual json files
+  getRecipes()
+}
+
+func getRecipes() {
   inFile, _ := os.ReadFile("output.txt")
   linx := strings.Split(string(inFile), "\n")
 
